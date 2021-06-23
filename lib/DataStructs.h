@@ -34,6 +34,11 @@ namespace MeshReconstruction
 			auto n = Norm();
 			return { x / n, y / n, z / n };
 		}
+
+		Vec3 Fabs() const
+		{			
+			return { x > 0.0 ? x : -x,y > 0.0 ? y: -y,z > 0.0 ? z : -z, };
+		}
 	};
 
 	struct Rect3
